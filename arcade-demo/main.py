@@ -33,8 +33,8 @@ file_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(file_path)
 
 
-WIDTH = 960
-HEIGHT = 540
+WIDTH = 1280
+HEIGHT = 720
 SPRITE_SCALING = 0.5
 
 class MenuView(arcade.View):
