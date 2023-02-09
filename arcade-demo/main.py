@@ -100,7 +100,7 @@ class GameView(arcade.View):
             self.coin_list.append(coin)
 
     def on_show(self):
-        arcade.set_background_color(arcade.color.LIGHTBLUE)
+        arcade.set_background_color(arcade.color.CYAN)
 
         # Don't show the mouse cursor
         self.window.set_mouse_visible(True)
