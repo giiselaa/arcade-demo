@@ -157,7 +157,7 @@ class GameOverView(arcade.View):
         self.time_taken = 0
 
     def on_show(self):
-        arcade.set_background_color(arcade.color.WHITE)
+        arcade.set_background_color(arcade.color.BLACK)
 
     def on_draw(self):
         arcade.start_render()
