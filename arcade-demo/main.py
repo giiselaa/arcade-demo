@@ -39,7 +39,7 @@ SPRITE_SCALING = 0.5
 
 class MenuView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.BLUE)
+        arcade.set_background_color(arcade.color.PURPLE)
 
     def on_draw(self):
         arcade.start_render()
@@ -55,7 +55,7 @@ class MenuView(arcade.View):
 
 class InstructionView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.WHITE)
+        arcade.set_background_color(arcade.color.RED)
 
     def on_draw(self):
         arcade.start_render()
@@ -164,7 +164,7 @@ class GameOverView(arcade.View):
         """
         Draw "Game over" across the screen.
         """
-        arcade.draw_text("Game Over", WIDTH / 2, HEIGHT / 2 - 75, arcade.color.WHITE, font_size=50, anchor_x="center")
+        arcade.draw_text("Game Over", WIDTH / 2, HEIGHT / 2, arcade.color.WHITE, font_size=50, anchor_x="center")
         arcade.draw_text("Click to restart", WIDTH / 2, HEIGHT / 2 - 75, arcade.color.WHITE, font_size=20, anchor_x="center")
 
         time_taken_formatted = f"{round(self.time_taken, 2)} seconds"
