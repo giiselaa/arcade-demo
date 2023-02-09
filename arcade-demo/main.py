@@ -39,7 +39,7 @@ SPRITE_SCALING = 0.5
 
 class MenuView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.PURPLE)
+        arcade.set_background_color(arcade.color.CYAN)
 
     def on_draw(self):
         arcade.start_render()
@@ -55,7 +55,7 @@ class MenuView(arcade.View):
 
 class InstructionView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.RED)
+        arcade.set_background_color(arcade.color.PURPLE)
 
     def on_draw(self):
         arcade.start_render()
