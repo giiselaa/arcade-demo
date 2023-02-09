@@ -33,8 +33,8 @@ file_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(file_path)
 
 
-WIDTH = 1200
-HEIGHT = 900
+WIDTH = 960
+HEIGHT = 540
 SPRITE_SCALING = 0.5
 
 class MenuView(arcade.View):
@@ -164,8 +164,8 @@ class GameOverView(arcade.View):
         """
         Draw "Game over" across the screen.
         """
-        arcade.draw_text("Game Over", 240, 400, arcade.color.WHITE, 54)
-        arcade.draw_text("Click to restart", 310, 300, arcade.color.WHITE, 24)
+        arcade.draw_text("Game Over", arcade.color.BLACK, font_size=50, anchor_x="center")
+        arcade.draw_text("Click to restart", arcade.color.BLACK, font_size=20, anchor_x="center")
 
         time_taken_formatted = f"{round(self.time_taken, 2)} seconds"
         arcade.draw_text(f"Time taken: {time_taken_formatted}",
