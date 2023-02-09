@@ -33,13 +33,13 @@ file_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(file_path)
 
 
-WIDTH = 800
-HEIGHT = 600
+WIDTH = 1200
+HEIGHT = 900
 SPRITE_SCALING = 0.5
 
 class MenuView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.WHITE)
+        arcade.set_background_color(arcade.color.BLUE)
 
     def on_draw(self):
         arcade.start_render()
@@ -55,7 +55,7 @@ class MenuView(arcade.View):
 
 class InstructionView(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.ORANGE_PEEL)
+        arcade.set_background_color(arcade.color.WHITE)
 
     def on_draw(self):
         arcade.start_render()
@@ -87,7 +87,7 @@ class GameView(arcade.View):
         self.player_sprite.center_y = 50
         self.player_list.append(self.player_sprite)
 
-        for i in range(5):
+        for i in range(10):
 
             # Create the coin instance
             coin = arcade.Sprite(":resources:images/items/coinGold.png", SPRITE_SCALING / 3)
@@ -103,7 +103,7 @@ class GameView(arcade.View):
         arcade.set_background_color(arcade.color.AMAZON)
 
         # Don't show the mouse cursor
-        self.window.set_mouse_visible(False)
+        self.window.set_mouse_visible(True)
 
     def on_draw(self):
         arcade.start_render()
@@ -113,7 +113,7 @@ class GameView(arcade.View):
 
         # Put the text on the screen.
         output = f"Score: {self.score}"
-        arcade.draw_text(output, 10, 30, arcade.color.WHITE, 14)
+        arcade.draw_text(output, 10, 30, arcade.color.BLACK, 14)
         output_total = f"Total Score: {self.window.total_score}"
         arcade.draw_text(output_total, 10, 10, arcade.color.WHITE, 14)
 
@@ -157,7 +157,7 @@ class GameOverView(arcade.View):
         self.time_taken = 0
 
     def on_show(self):
-        arcade.set_background_color(arcade.color.BLACK)
+        arcade.set_background_color(arcade.color.WHITE)
 
     def on_draw(self):
         arcade.start_render()
